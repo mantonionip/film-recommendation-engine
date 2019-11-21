@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link type="image/png" href="assets/mask-favicon.png" rel="icon"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Boogaloo|Lato|Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- header starts here -->
+    <header class="engineHeader wrapper">
+        <!-- title here -->
+        <div>
+            <h1>A Film Lover's Dream</h1>
+        </div>
+    </header>
+    <!-- header ends here -->
+
+    <!-- main starts here -->
+    <main class="wrapper">
+        <section class="mainPageSection">
+            <div class="instructions">
+                <h2>Instructions</h2>
+                <p>Enter a year, pick your favourite genre and enjoy the best films of all time</p>
+            </div>
+
+            <div class="selectYear">
+                <form action="">
+                    <div class="yearInput">
+                        <label for="year">Enter a year here:</label>
+                        <input type="number" id="year" min="" max="" placeholder="YYYY">
+
+                        <!-- <p class=""></p> -->
+                    </div>
+                </form>
+            </div>
+
+            <!-- genre selector starts here-->
+            <div class="genre">
+                <ul class="genreGrid">
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+
+                    <li>
+                        <img class="genreImage" src="" alt="">
+                        <input type="chechbox" hidden>
+                    </li>
+                </ul>
+                <div class="formSubmit">
+                    <label for="submit" class="visuallyHidden"></label>
+                    <input type="submit" id="submit" value="submit">
+                </div>
+            </div>
+            <!-- genre selector ends here -->
+        </section>
+
+            <!-- result page starts here -->
+        <section class="resultPageSection">
+            <div class="movieContainer wrapper">
+                <div class="moviePoster">Movie Poster</div>
+                <div class="movieTitle">Movie Title</div>
+                <div class="movieSynopsis">Movie Synopsis</div>
+            </div>
+            <button class="restartButton">Restart</button>
+        </section>
+    </main>
+    <!-- main ends here -->
+
+    <footer>
+        <div class="wrapper">
+            <p>Created by Wade Butler and Mehdi Pilehvarian</p>
+            <p>Data taken from The Movie Database (TDMB)</p>
+        </div>
+    </footer>
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>
