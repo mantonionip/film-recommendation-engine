@@ -287,7 +287,7 @@ header {
   background: #17103D;
   color: white;
   text-align: center;
-  height: 25vh;
+  height: 15vh;
 }
 
 header h1 {
@@ -326,6 +326,11 @@ footer p {
 
 .showBegins {
   position: relative;
+}
+
+p.instruction {
+  font-size: 1.8rem;
+  color: #FFF;
 }
 
 .genre {
@@ -373,6 +378,7 @@ footer p {
   background-color: #423D5B;
   border-radius: 5px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .genre .genreGrid .genreImage label:hover {
@@ -413,7 +419,7 @@ footer p {
   text-align: center;
   font-size: 2rem;
   position: absolute;
-  bottom: -45px;
+  bottom: -65px;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -425,6 +431,7 @@ footer p {
   border: none;
   padding: 10px 50px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .finalResult {

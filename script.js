@@ -109,7 +109,7 @@ movieApp.userSubmission = function() {
         } else if ($('#year').val() > 2020 || $('#year').val() < 1895) {
             swal({
                 title: 'WARNING!',
-                text: 'Honey, Select a Year Between 1985 and 2020',
+                text: 'Honey, Select a Year Between 1895 and 2020',
                 imageUrl: 'image/pulpFiction.jpg',
                 imageWidth: 600,
                 imageHeight: 200,

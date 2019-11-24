@@ -1,5 +1,12 @@
 .showBegins {
     position: relative;
+
+}
+
+p.instruction {
+    font-size: 1.8rem;
+
+    color: $color-light;
 }
 
 // .swal-wide {
@@ -39,6 +46,7 @@
                 background-color: $color-secondary;
                 border-radius: 5px;
                 padding: 10px;
+                cursor: pointer;
 
                 &:hover {
                     // background: rgba(220, 20, 60, .4);
@@ -80,11 +88,11 @@
     text-align: center;
     font-size: 2rem;
     position: absolute;
-    bottom: -45px;
+    bottom: -65px;
     left: 50%;
     transform: translate(-50%);
     // margin: 1.5% 0; 
-
+    
 }
 
 .getMovies,
@@ -93,6 +101,7 @@
     border: none;
     padding: 10px 50px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .finalResult {
