@@ -4,102 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!-- <link type="image/png" href="assets/mask-favicon.png" rel="icon"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Boogaloo|Lato|Yanone+Kaffeesatz&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
+    <title>Film Recommendation Engine</title>
+    <link href="https://fonts.googleapis.com/css?family=Spectral:600,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <!-- header starts here -->
-    <header class="engineHeader wrapper">
-        <!-- title here -->
-        <div>
+    <header>
+        <div class="wrapper">
+            <!-- title here -->
             <h1>A Film Lover's Dream</h1>
+            
+            <section class="instructions">
+                <!-- <h2>Instructions:</h2> -->
+                <p>Enter a Year, select a genre, press the Get Movie button and the first 3 high rated titles. Click on a poster and get more info of the movie!</p>
+            </section>
         </div>
     </header>
     <!-- header ends here -->
 
     <!-- main starts here -->
     <main class="wrapper">
-        <section class="mainPageSection">
-            <div class="instructions">
-                <h2>Instructions</h2>
-                <p>Enter a year, pick your favourite genre and enjoy the best films of all time</p>
-            </div>
+        <section class="showBegins">
+            <form action="" class="movieForm">
+                <div class="yearInput">
+                    <label for="year">Enter a Year:</label>
+                    <input type="number" id="year" maxlength="4" min="1895" max="2020" placeholder="Year">
+                </div>
+            </form>
 
-            <div class="selectYear">
-                <form action="" class="movieForm">
-                    <div>
-                        <label for="year">Enter a year here:</label>
-                        <input type="number" id="year" min="" max="" placeholder="YYYY">
-                        <!-- <button type="submit">Submit</button> -->
-                        <!-- <p class=""></p> -->
-                    </div>
-                    <div class="genre">
-                        <ul class="genreGrid">
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="drama" value="18" class="visually-hidden">
-                                <label for="drama">DRAMA</label>
-                            </li>
-                    
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="action" value="28" class="visually-hidden">
-                                <label for="action">ACTION</label>
-                            </li>
-                    
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="comedy" value="35" class="visually-hidden">
-                                <label for="comedy">COMEDY</label>
-                            </li>
-                    
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="documentary" value="99" class="visually-hidden">
-                                <label for="documentary">DOCUMENTARY</label>
-                            </li>
-                    
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="romance" value="10749" class="visually-hidden">
-                                <label for="romance">ROMANCE</label>
-                            </li>
-                    
-                            <li class="genreImage">
-                                <!-- <img class="genreImage" src="" alt=""> -->
-                                <input type="radio" name="genre" id="western" value="37" class="visually-hidden">
-                                <label for="western">WESTERN</label>
-                            </li>
-                        </ul>
-                        <div class="formSubmit">
-                            <label for="submit" class="visuallyHidden"></label>
-                            <input type="submit" id="submit" value="submit">
-                        </div>
-                    </div>
-                </form>
+            <div class="genre">
+                <ul class="genreGrid">
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="action" value="28">
+                        <label for="action">Action</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="adventure" value="12">
+                        <label for="adventure">Adventure</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="animation" value="16">
+                        <label for="animation">Animation</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="comedy" value="35">
+                        <label for="comedy">Comedy</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="crime" value="80">
+                        <label for="crime">Crime</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="drama" value="18">
+                        <label for="drama">Drama</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="fantasy" value="14">
+                        <label for="fantasy">Fantasy</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="history" value="36">
+                        <label for="history">History</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="" value="27">
+                        <label for="horror">Horror</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="music" value="10402">
+                        <label for="music">Music</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="mystery" value="9648">
+                        <label for="mystery">Mystery</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="romance" value="10749">
+                        <label for="romance">Romance</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="sci-fi" value="878">
+                        <label for="sci-fi">Science Fiction</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="thriller" value="53">
+                        <label for="thriller">Thriller</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="war" value="10752">
+                        <label for="war">War</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="western" value="37">
+                        <label for="western">Western</label>
+                    </li>
+                </ul>
+                <div class="formSubmit">
+                    <button class="getMovies" type="submit" id="submit">Get Movies!</button>
+                </div>
             </div>
-
-            <!-- genre selector starts here-->
-            
-            <!-- genre selector ends here -->
         </section>
-
-            <!-- result page starts here -->
+        
+        <!-- result page starts here -->
         <section class="resultPageSection"></section>
         <!-- section.specific -->
-        <section class="finalResult"></section>
+        <section class="finalResult">
+            <div class="reset">
+                <button class="resetButton" id="submit">Reset</button>
+            </div>
+        </section>
     </main>
     <!-- main ends here -->
 
-    <!-- <footer>
+    <footer>
         <div class="wrapper">
-            <p>Created by Wade Butler and Mehdi Pilehvarian</p>
+            <p>Created by Mehdi Pilehvarian and Wade Butler</p>
             <p>Data taken from The Movie Database (TDMB)</p>
         </div>
-    </footer> -->
+    </footer>
     
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="script.js"></script>

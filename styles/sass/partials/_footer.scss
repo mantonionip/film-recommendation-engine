@@ -1,4 +1,19 @@
-footer div {
-    display: flex;
-    justify-content: space-between;
+footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    
+    background: $color-primary;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p {
+        font-size: 1.5rem;
+        
+        color: white;
+    }
 }

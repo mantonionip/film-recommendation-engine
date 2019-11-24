@@ -1,0 +1,100 @@
+.showBegins {
+    position: relative;
+}
+
+// .swal-wide {
+//     width: 1500px !important;
+// }
+
+.genre {
+    display: flex;
+    flex-direction: column;
+
+    .genreGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-auto-rows: minmax(200px, 120px);
+        grid-gap: 10px;
+
+        .genreImage {
+            height: 100px;
+            
+            input:focus + label {
+                background: rgba(220, 20, 60, .4);
+            }
+            
+            input:checked + label {
+                background: $color-tertiary;
+                color: $color-primary;
+            }
+            
+            label {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                font-size: 2rem;
+
+                color: $color-light;
+                background-color: $color-secondary;
+                border-radius: 5px;
+                padding: 10px;
+
+                &:hover {
+                    // background: rgba(220, 20, 60, .4);
+                    // background-color: rgba(246, 205, 64, .8);
+                    border: 2px solid $color-tertiary;
+                }
+
+                &:checked {
+                    background: rgba(220, 20, 60, .4);
+                }
+            }
+        }
+    }
+}
+
+.resultPageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.yearInput {
+    font-size: 2rem;
+    margin: 1%;
+    color: $color-light;
+
+    input {
+        font-size: 1.4rem;
+        // color: #AAA;
+        
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+}
+
+.formSubmit,
+.reset {
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translate(-50%);
+    // margin: 1.5% 0; 
+
+}
+
+.getMovies,
+.resetButton {
+    background-color: $color-tertiary; 
+    border: none;
+    padding: 10px 50px;
+    border-radius: 5px;
+}
+
+.finalResult {
+    position: relative;
+}
