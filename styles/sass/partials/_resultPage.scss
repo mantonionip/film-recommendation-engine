@@ -1,13 +1,8 @@
-.landingPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .resultPageSection {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px; 
+    padding-top: 40px;
 }
 
 .flip-card {
@@ -15,34 +10,18 @@
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
     text-align: center;
     transition: transform 1s;
     transform-style: preserve-3d;
 }
 
-
-// hover state
-.flip-card:hover .flip-card-inner {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-
 .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
-
     border-radius: 20px;
 }
 
 .flip-card-front {
-    // background-color: black;
-    // width: 100%;
-    // height: 100%;
+    position: relative;
 
     img {
         border-radius: 20px;
@@ -51,8 +30,37 @@
 }
 
 .flip-card-back {
-    // background-color: #2980b9;
-    // background-color: $color-tertiary;
-    color: white;
+    background-color: $color-quaternary;
+    color: $color-primary;
+    transform: rotateY(180deg);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    padding: 20px;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .rating {
+        font-size: 2rem;
+    }
+
+    .synopsis {
+        font-size: 1.4rem;
+        text-align: center;
+
+        .span {
+            font-weight: bold;
+            font-size: 1.8rem;
+        }
+    }
+    
+}
+
+.flip-card-inner:hover {
+    cursor: pointer;
     transform: rotateY(180deg);
 }

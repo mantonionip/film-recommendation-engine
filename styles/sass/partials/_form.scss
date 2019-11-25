@@ -22,11 +22,11 @@ main {
             height: 120px;
             
             input:focus + label {
-                background: rgba(220, 20, 60, .4);
+                background-color: rgba(220, 20, 60, .4);
             }
             
             input:checked + label {
-                background: $color-tertiary;
+                background-color: $color-tertiary;
                 color: $color-primary;
             }
             
@@ -95,7 +95,7 @@ main {
 
 .resetButton {
     position: absolute;
-    bottom: -550px;
+    bottom: -100px;
     left: 50%;
     transform: translate(-50%);
 
@@ -116,5 +116,29 @@ main {
         border: 2px solid $color-tertiary;
         background-color: $color-secondary;
         color: $color-light;
+    }
+}
+
+// Genre SVG Backgrounds Styles
+.genreImage {
+    .svg {
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .action {
+        background-image: url(../image/action.svg);
+        background-size: 50%;
+    }
+
+    .animation {
+        background-image: url(../image/animation.svg);
+        background-position: center 80%;
+        background-size: 35%;
+
+    }
+
+    .comdey {
+        background-image: url(../image/comedy.svg);
     }
 }

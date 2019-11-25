@@ -27,39 +27,21 @@ movieApp.getInfo = function () {
     }).then((result) => {
         movieApp.newResult = result.results.slice(0, 3);
         movieApp.newResult.forEach((movie, index) => {
-            let movieHtml = `<div class="flip-card">
+            let movieHtml = 
+            `<div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} pxoster">
                     </div>
                     <div class="flip-card-back">
                         <h2>${movie.title}</h2>
-                        <p>${movie.vote_average}</p>
-                        <p>${movie.release_date}</p>
-                        <p>${movie.overview}</p>
+                        <p class="rating">Rating: ${movie.vote_average}/10</p>
+                        <p class="synopsis"><span class="span">Synopsis:</span> ${movie.overview}</p>
                     </div>
                 </div>
             </div>`
             
-            // `<button class="poster" value="${index}"><img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} pxoster"></button>`;
-            
-            $(".resultPageSection").append(movieHtml);
-            
-            if (movieApp.newResult.length === 3) {
-                $(".resultPageSection button").css({
-                    "width": "calc(100% / 3)",
-                })
-            } else if (movieApp.newResult.length === 2) {
-                $(".resultPageSection button").css({
-                    "width": "calc(100% / 2)",
-                })
-            } else {
-                $(".resultPageSection button").css({
-                    "position": "absolute",
-                    "left": "50%",
-                    "transform": "translate(-50%)",
-                })
-            }
+            $(".resultPageSection").append(movieHtml); 
         })
     })
 }
