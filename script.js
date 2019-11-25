@@ -21,7 +21,6 @@ movieApp.getInfo = function () {
             api_key: movieApp.apiKey,
             with_genres: movieApp.genreID,
             primary_release_year: movieApp.releaseYear,
-            // "original_language": "en",
             "vote_average.gte": 7,
             sort_by: "vote_count.desc",
         }
@@ -68,10 +67,9 @@ movieApp.getInfo = function () {
 // instructions alerts
 movieApp.instructions = function () {
     $(".instructions").on("click", function () {
-        // console.log("hello");
         swal(
             'Instructions',
-            'Enter a Year, select a genre, press the Get Movie button and the first 3 high rated titles. Click on a poster and get more info of the movie!',
+            'Pick a Year, select your favorite genre, and get the first 3 high rated films. Hover over the posters and read more info about the selected title!',
         )
     })
 }
@@ -98,6 +96,10 @@ movieApp.displayMovies = function () {
         $('.showBegins').show();
         $('#year').val('');
         $("input[type=radio]").prop("checked", false);
+        $('footer').empty();
+        $('.resetButton').css({
+            "display": "none"
+        });
     })
 }
 
@@ -124,7 +126,7 @@ movieApp.userSubmission = function() {
                     !$("input[type=radio]").is(':checked')) {
             swal({
                 title: 'WARNING!',
-                text: 'Arrrrr! You Forgot to Enter Year and Select Genre',
+                text: 'Arrrrr! You Forgot to Pick  a Year and Select Genre',
                 imageUrl: 'image/shining2.jpg',
                 imageWidth: 400,
                 imageHeight: 200,
@@ -148,16 +150,28 @@ movieApp.userSubmission = function() {
             movieApp.getInfo();
             movieApp.displaySearchPage();
             movieApp.displayMovies();
+            movieApp.showFooter();
+
+            $('.resetButton').css({
+                "display": "block"
+            });
         }
     });
 }
 
+movieApp.showFooter = function() {
+    const displayFooter = `<div class="wrapper">
+            <p>Copyright &#169; 2019 Mehdi Pilehvarian and Wade Butler</p>
+            
+        </div>`
 
+    $('footer').append(displayFooter);
+}
 
 // Create init to start the movieApp initiating on click of submit button
 movieApp.init = function() {
     movieApp.instructions();
-    movieApp.userSubmission();
+    movieApp.userSubmission();    
 }
 
 // document READY. Wait untill everything is loaded successfully

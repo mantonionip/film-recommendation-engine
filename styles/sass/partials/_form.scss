@@ -1,21 +1,21 @@
-.showBegins {
+main {
+    padding-top: 40px;
     position: relative;
 }
 
-p.instruction {
-    font-size: 1.8rem;
-
-    color: $color-light;
+.showBegins {
+    position: relative;
 }
 
 .genre {
     display: flex;
     flex-direction: column;
 
+    margin-top: 20px;
+
     .genreGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        // grid-auto-rows: minmax(200px, 120px);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 15px;
 
         .genreImage {
@@ -47,8 +47,6 @@ p.instruction {
                 cursor: pointer;
 
                 &:hover {
-                    // background: rgba(220, 20, 60, .4);
-                    // background-color: rgba(246, 205, 64, .8);
                     border: 2px solid $color-tertiary;
                 }
             }
@@ -58,7 +56,7 @@ p.instruction {
 
 .yearInput {
     font-size: 2rem;
-    margin: 1%;
+    margin: 2% 0;
     color: $color-light;
 
     display: flex;
@@ -83,16 +81,25 @@ p.instruction {
 }
 
 .formSubmit,
-.reset {
+.resetButton {
     text-align: center;
-    font-size: 2rem;
-    margin: 10px;
-    // position: absolute;
-    // bottom: -65px;
-    // left: 50%;
-    // transform: translate(-50%);
-    // margin: 1.5% 0; 
-    
+    font-size: 2rem;    
+}
+
+.formSubmit {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.resetButton {
+    position: absolute;
+    bottom: -550px;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: none;
 }
 
 .getMovies,
@@ -110,20 +117,4 @@ p.instruction {
         background-color: $color-secondary;
         color: $color-light;
     }
-}
-
-.reset {
-    position: relative;
-    height: 5rem;
-    // display: none;
-}
-
-.resetButton {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.finalResult {
-    position: relative;
 }

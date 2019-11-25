@@ -4,9 +4,11 @@ header {
     color: white;
     text-align: center;
     height: 15vh;
+    // border: 1px solid white;
+    // padding-bottom: 0;
 
     h1 {
-        padding: 2%;
+        padding: 2% 0 0 0;
         font-size: 7rem;
         font-weight: bolder;
     }
@@ -24,5 +26,39 @@ header {
             font-size: 4rem;
             color: $color-tertiary;
         }
+    }
+}
+
+.swal2-popup {
+    width: 450px;
+    height: 350px;
+    background: $color-tertiary;
+
+    .swal2-image {
+        width: 300px;
+        height: 200px;
+    }
+
+    .swal2-title {
+        // font-size: 4rem;
+
+        color: $color-primary;
+    }
+
+    .swal2-content {
+        font-family: $font-secondary;
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        color: $color-primary;
+
+        // margin: 1.5rem 0;
+        padding: 0 20px;
+    }
+
+    .swal2-styled.swal2-confirm {
+        font-size: 1.5rem;
+        padding: 10px 30px 8px;
+        background-color: $color-primary;
     }
 }
