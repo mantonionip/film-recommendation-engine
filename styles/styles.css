@@ -257,7 +257,7 @@ h1, h2 {
 }
 
 h1 {
-  font-family: 'Crimson Text', serif;
+  font-family: "Calistoga", cursive;
 }
 
 .wrapper {
@@ -276,6 +276,10 @@ h1 {
   white-space: nowrap;
 }
 
+img {
+  width: 100%;
+}
+
 header {
   position: relative;
   background: #17103D;
@@ -288,6 +292,8 @@ header h1 {
   padding: 2% 0 0 0;
   font-size: 7rem;
   font-weight: bolder;
+  -webkit-animation: neon .08s ease-in-out infinite alternate;
+          animation: neon .08s ease-in-out infinite alternate;
 }
 
 header .instructions {
@@ -302,6 +308,24 @@ header .instructions {
 header .instructions .fas {
   font-size: 4rem;
   color: #FFCA13;
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+  }
 }
 
 .swal2-popup {
@@ -396,11 +420,6 @@ main {
 
 .genre .genreGrid .genreImage label:hover {
   border: 2px solid #FFCA13;
-}
-
-.action {
-  background-image: url(../image/action.svg);
-  color: white;
 }
 
 .yearInput {

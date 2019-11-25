@@ -21,7 +21,7 @@ h1, h2 {
 }
 
 h1 {
-    font-family: 'Crimson Text', serif;
+    font-family: $font-primary;
 }
 
 .wrapper {
@@ -39,7 +39,7 @@ h1 {
 }
 
 img {
-    // width: 100%;
+    width: 100%;
     // position: relative;
     // transform: scaleX(1.03) scaleY(1.01);
     // backface-visibility: hidden;
