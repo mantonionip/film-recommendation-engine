@@ -28,7 +28,21 @@ movieApp.getInfo = function () {
     }).then((result) => {
         movieApp.newResult = result.results.slice(0, 3);
         movieApp.newResult.forEach((movie, index) => {
-            let movieHtml = `<button value="${index}"><img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster"></button>`;
+            let movieHtml = `<div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} pxoster">
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>${movie.title}</h2>
+                        <p>${movie.vote_average}</p>
+                        <p>${movie.release_date}</p>
+                        <p>${movie.overview}</p>
+                    </div>
+                </div>
+            </div>`
+            
+            // `<button class="poster" value="${index}"><img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} pxoster"></button>`;
             
             $(".resultPageSection").append(movieHtml);
             
@@ -42,12 +56,23 @@ movieApp.getInfo = function () {
                 })
             } else {
                 $(".resultPageSection button").css({
-                   "position": "absolute",
-                   "left": "50%",
-                   "transform": "translate(-50%)",
+                    "position": "absolute",
+                    "left": "50%",
+                    "transform": "translate(-50%)",
                 })
             }
         })
+    })
+}
+
+// instructions alerts
+movieApp.instructions = function () {
+    $(".instructions").on("click", function () {
+        // console.log("hello");
+        swal(
+            'Instructions',
+            'Enter a Year, select a genre, press the Get Movie button and the first 3 high rated titles. Click on a poster and get more info of the movie!',
+        )
     })
 }
 
@@ -113,7 +138,7 @@ movieApp.userSubmission = function() {
                 imageUrl: 'image/pulpFiction.jpg',
                 imageWidth: 600,
                 imageHeight: 200,
-                imageAlt: 'Marylin Monroe medium shot',
+                imageAlt: 'Emma Thorman in Pulp Fiction lying on the bed smoking',
             })
         // If user enters the correct year and pick genre
         } else if ($('#year').val() !== "" &&
@@ -127,21 +152,12 @@ movieApp.userSubmission = function() {
     });
 }
 
-// Function to append the final result to the page
-movieApp.resultInfo = function() {
-    $('.resultPageSection').on('click', "button", function () {
-        const displaySwitch = $(this).val();
 
-        let movieHtml = `<h2>${movieApp.newResult[displaySwitch].title}</h2> <p>${movieApp.newResult[displaySwitch].overview}</p>`
-        $(".finalResult").empty()
-        $(".finalResult").append(movieHtml);
-    })
-}  
 
 // Create init to start the movieApp initiating on click of submit button
 movieApp.init = function() {
+    movieApp.instructions();
     movieApp.userSubmission();
-    movieApp.resultInfo();
 }
 
 // document READY. Wait untill everything is loaded successfully

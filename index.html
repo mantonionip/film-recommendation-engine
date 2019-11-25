@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Film Recommendation Engine</title>
-    <link href="https://fonts.googleapis.com/css?family=Spectral:600,700&display=swap" rel="stylesheet">
+    <link type="image/png" href="image/film-reel-icon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700|Spectral:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     <link rel="stylesheet" href="styles/styles.css">
@@ -13,20 +15,16 @@
 <body>
     <!-- header starts here -->
     <header>
-        <div class="wrapper">
+        <div>
             <!-- title here -->
             <h1>A Film Lover's Dream</h1>
-            
+            <button class="instructions"><i class="fas fa-info-circle"></i></button>
         </div>
     </header>
     <!-- header ends here -->
     
     <!-- main starts here -->
     <main class="wrapper">
-        <section class="instructions">
-            <!-- <h2>Instructions:</h2> -->
-            <p class="instruction">Enter a Year, select a genre, press the Get Movie button and the first 3 high rated titles. Click on a poster and get more info of the movie!</p>
-        </section>
         <section class="showBegins">
             <form action="" class="movieForm">
                 <div class="yearInput">
@@ -41,10 +39,10 @@
                         <input class="hide" type="radio" name="genre" id="action" value="28">
                         <label for="action">Action</label>
                     </li>
-                    <li class="genreImage">
+                    <!-- <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="adventure" value="12">
                         <label for="adventure">Adventure</label>
-                    </li>
+                    </li> -->
                     <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="animation" value="16">
                         <label for="animation">Animation</label>
@@ -53,10 +51,10 @@
                         <input class="hide" type="radio" name="genre" id="comedy" value="35">
                         <label for="comedy">Comedy</label>
                     </li>
-                    <li class="genreImage">
+                    <!-- <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="crime" value="80">
                         <label for="crime">Crime</label>
-                    </li>
+                    </li> -->
                     <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="drama" value="18">
                         <label for="drama">Drama</label>
@@ -65,22 +63,22 @@
                         <input class="hide" type="radio" name="genre" id="fantasy" value="14">
                         <label for="fantasy">Fantasy</label>
                     </li>
-                    <li class="genreImage">
+                    <!-- <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="history" value="36">
                         <label for="history">History</label>
-                    </li>
+                    </li> -->
                     <li class="genreImage">
-                        <input class="hide" type="radio" name="genre" id="" value="27">
+                        <input class="hide" type="radio" name="genre" id="horror" value="27">
                         <label for="horror">Horror</label>
                     </li>
                     <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="music" value="10402">
-                        <label for="music">Music</label>
+                        <label for="music">Musical</label>
                     </li>
-                    <li class="genreImage">
+                    <!-- <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="mystery" value="9648">
                         <label for="mystery">Mystery</label>
-                    </li>
+                    </li> -->
                     <li class="genreImage">
                         <input class="hide" type="radio" name="genre" id="romance" value="10749">
                         <label for="romance">Romance</label>
@@ -110,18 +108,20 @@
         
         <!-- result page starts here -->
         <section class="resultPageSection"></section>
+
+        <div class="reset goAway">
+            <button class="resetButton" id="submit">Reset</button>
+        </div>
         <!-- section.specific -->
-        <section class="finalResult">
-            <div class="reset">
-                <button class="resetButton" id="submit">Reset</button>
-            </div>
+        <!-- <section class="finalResult"> -->
+            
         </section>
     </main>
     <!-- main ends here -->
 
     <footer>
         <div class="wrapper">
-            <p>Created by Mehdi Pilehvarian and Wade Butler</p>
+            <p>Copyright &#169; Mehdi Pilehvarian and Wade Butler 2019</p>
             <p>Data taken from The Movie Database (TDMB)</p>
         </div>
     </footer>

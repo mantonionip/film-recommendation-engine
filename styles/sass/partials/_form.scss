@@ -1,6 +1,5 @@
 .showBegins {
     position: relative;
-
 }
 
 p.instruction {
@@ -9,22 +8,18 @@ p.instruction {
     color: $color-light;
 }
 
-// .swal-wide {
-//     width: 1500px !important;
-// }
-
 .genre {
     display: flex;
     flex-direction: column;
 
     .genreGrid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         // grid-auto-rows: minmax(200px, 120px);
-        grid-gap: 10px;
+        grid-gap: 15px;
 
         .genreImage {
-            height: 100px;
+            height: 120px;
             
             input:focus + label {
                 background: rgba(220, 20, 60, .4);
@@ -40,10 +35,13 @@ p.instruction {
                 justify-content: center;
                 width: 100%;
                 height: 100%;
+                font-family: $font-secondary;
                 font-size: 2rem;
+                text-transform: uppercase;
 
                 color: $color-light;
                 background-color: $color-secondary;
+                border: 2px solid transparent;
                 border-radius: 5px;
                 padding: 10px;
                 cursor: pointer;
@@ -53,20 +51,9 @@ p.instruction {
                     // background-color: rgba(246, 205, 64, .8);
                     border: 2px solid $color-tertiary;
                 }
-
-                &:checked {
-                    background: rgba(220, 20, 60, .4);
-                }
             }
         }
     }
-}
-
-.resultPageSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
 }
 
 .yearInput {
@@ -74,12 +61,24 @@ p.instruction {
     margin: 1%;
     color: $color-light;
 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+        font-family: $font-secondary;
+    }
+    
     input {
+        height: 3rem;
+        font-family: $font-secondary;
         font-size: 1.4rem;
-        // color: #AAA;
         
+        border: none;
         border-radius: 5px;
+        box-shadow: inset 0 0 3px $color-primary;
         padding: 5px 10px;
+        margin-left: 1rem;
     }
 }
 
@@ -87,10 +86,11 @@ p.instruction {
 .reset {
     text-align: center;
     font-size: 2rem;
-    position: absolute;
-    bottom: -65px;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 10px;
+    // position: absolute;
+    // bottom: -65px;
+    // left: 50%;
+    // transform: translate(-50%);
     // margin: 1.5% 0; 
     
 }
@@ -100,8 +100,28 @@ p.instruction {
     background-color: $color-tertiary; 
     border: none;
     padding: 10px 50px;
+    border: 2px solid transparent;
     border-radius: 5px;
     cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        border: 2px solid $color-tertiary;
+        background-color: $color-secondary;
+        color: $color-light;
+    }
+}
+
+.reset {
+    position: relative;
+    height: 5rem;
+    // display: none;
+}
+
+.resetButton {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .finalResult {

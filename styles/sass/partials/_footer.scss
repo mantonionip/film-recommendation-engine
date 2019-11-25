@@ -1,11 +1,9 @@
 footer {
     position: fixed;
     bottom: 0;
-
+    // display: none;
     width: 100%;
-    
     background: $color-primary;
-    // background: black;
     
     div {
         display: flex;

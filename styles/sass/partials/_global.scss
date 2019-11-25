@@ -21,12 +21,12 @@ h1, h2 {
 }
 
 h1 {
-    font-family: 'Spectral', serif;
+    font-family: 'Crimson Text', serif;
 }
 
 .wrapper {
     max-width: 1400px;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -39,7 +39,8 @@ h1 {
 }
 
 img {
-    width: 100%;
-    position: relative;
-    transform: scaleX(1.03) scaleY(1.01);
+    // width: 100%;
+    // position: relative;
+    // transform: scaleX(1.03) scaleY(1.01);
+    // backface-visibility: hidden;
 }

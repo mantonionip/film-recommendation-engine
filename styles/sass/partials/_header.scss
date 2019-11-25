@@ -1,20 +1,28 @@
 header {
+    position: relative;
     background: $color-primary;
     color: white;
     text-align: center;
     height: 15vh;
 
     h1 {
-        
         padding: 2%;
-        font-size: 6rem;
+        font-size: 7rem;
+        font-weight: bolder;
     }
 
     .instructions {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: none;
+        background-color: transparent;
+
         font-size: 1.5rem;
 
-        p {
-            padding-bottom: 10px;
+        .fas {
+            font-size: 4rem;
+            color: $color-tertiary;
         }
     }
 }
