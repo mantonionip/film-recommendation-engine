@@ -128,17 +128,74 @@ main {
     
     .action {
         background-image: url(../image/action.svg);
+        background-position: center 50%;
         background-size: 50%;
     }
 
     .animation {
         background-image: url(../image/animation.svg);
         background-position: center 80%;
-        background-size: 35%;
+        background-size: 38%;
 
     }
 
-    .comdey {
+    .comedy {
         background-image: url(../image/comedy.svg);
+        background-position: center 85%;
+        background-size: 38%;
+    }
+
+    .drama {
+        background-image: url(../image/drama.svg);
+        background-position: center 85%;
+        background-size: 50%;
+    }
+
+    .fantasy {
+        background-image: url(../image/fantasy.svg);
+        background-position: center 85%;
+        background-size: 40%;
+    }
+
+    .horror {
+        background-image: url(../image/horror.svg);
+        background-position: center 85%;
+        background-size: 50%;
+    }
+
+    .musical {
+        background-image: url(../image/musical.svg);
+        background-position: center 85%;
+        background-size: 40%;
+    }
+
+    .romance {
+        background-image: url(../image/romance.svg);
+        background-position: center;
+        background-size: 50%;
+    }
+
+    .sci-fi {
+        background-image: url(../image/sci-fi.svg);
+        background-position: center 85%;
+        background-size: 38%;
+    }
+
+    .thriller {
+        background-image: url(../image/thriller.svg);
+        background-position: center 85%;
+        background-size: 38%;
+    }
+
+    .war {
+        background-image: url(../image/war.svg);
+        background-position: center 85%;
+        background-size: 40%;
+    }
+
+    .western {
+        background-image: url(../image/western.svg);
+        background-position: center;
+        background-size: 50%;
     }
 }

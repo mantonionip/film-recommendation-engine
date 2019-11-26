@@ -509,17 +509,74 @@ main {
 
 .genreImage .action {
   background-image: url(../image/action.svg);
+  background-position: center 50%;
   background-size: 50%;
 }
 
 .genreImage .animation {
   background-image: url(../image/animation.svg);
   background-position: center 80%;
-  background-size: 35%;
+  background-size: 38%;
 }
 
-.genreImage .comdey {
+.genreImage .comedy {
   background-image: url(../image/comedy.svg);
+  background-position: center 85%;
+  background-size: 38%;
+}
+
+.genreImage .drama {
+  background-image: url(../image/drama.svg);
+  background-position: center 85%;
+  background-size: 50%;
+}
+
+.genreImage .fantasy {
+  background-image: url(../image/fantasy.svg);
+  background-position: center 85%;
+  background-size: 40%;
+}
+
+.genreImage .horror {
+  background-image: url(../image/horror.svg);
+  background-position: center 85%;
+  background-size: 50%;
+}
+
+.genreImage .musical {
+  background-image: url(../image/musical.svg);
+  background-position: center 85%;
+  background-size: 40%;
+}
+
+.genreImage .romance {
+  background-image: url(../image/romance.svg);
+  background-position: center;
+  background-size: 50%;
+}
+
+.genreImage .sci-fi {
+  background-image: url(../image/sci-fi.svg);
+  background-position: center 85%;
+  background-size: 38%;
+}
+
+.genreImage .thriller {
+  background-image: url(../image/thriller.svg);
+  background-position: center 85%;
+  background-size: 38%;
+}
+
+.genreImage .war {
+  background-image: url(../image/war.svg);
+  background-position: center 85%;
+  background-size: 40%;
+}
+
+.genreImage .western {
+  background-image: url(../image/western.svg);
+  background-position: center;
+  background-size: 50%;
 }
 
 .resultPageSection {
