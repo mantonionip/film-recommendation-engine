@@ -276,6 +276,7 @@ h1 {
 }
 
 img {
+  display: block;
   width: 100%;
 }
 
@@ -288,51 +289,33 @@ header {
 }
 
 header h1 {
-  padding: 2% 0 0 0;
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: bolder;
+  padding: 3% 0 0 0;
   -webkit-animation: neon .08s ease-in-out infinite alternate;
           animation: neon .08s ease-in-out infinite alternate;
 }
 
-header .instructions {
+.instructions {
+  font-size: 1.5rem;
   position: absolute;
   top: 20px;
   right: 20px;
   border: none;
   background-color: transparent;
-  font-size: 1.5rem;
 }
 
-header .instructions .fas {
+.instructions .fas {
   font-size: 6rem;
   color: #FFCA13;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
 
-header .instructions .fas:hover {
+.instructions .fas:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-@-webkit-keyframes neon {
-  from {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
-  }
-  to {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
-  }
-}
-
-@keyframes neon {
-  from {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
-  }
-  to {
-    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
-  }
 }
 
 .swal2-popup {
@@ -364,6 +347,24 @@ header .instructions .fas:hover {
   background-color: #17103D;
 }
 
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.92), 0 0 30px rgba(202, 228, 225, 0.34), 0 0 12px rgba(30, 132, 242, 0.52), 0 0 21px rgba(30, 132, 242, 0.92), 0 0 34px rgba(30, 132, 242, 0.78), 0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(202, 228, 225, 0.98), 0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58), 0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88), 0 0 60px #1e84f2;
+  }
+}
+
 main {
   padding-top: 40px;
   position: relative;
@@ -392,20 +393,23 @@ main {
   grid-gap: 15px;
 }
 
-.genre .genreGrid .genreImage {
+.genreImage {
   height: 120px;
 }
 
-.genre .genreGrid .genreImage input:focus + label {
+.genreImage input:focus + label {
   background-color: rgba(220, 20, 60, 0.4);
 }
 
-.genre .genreGrid .genreImage input:checked + label {
+.genreImage input:checked + label {
   background-color: #FFCA13;
   color: #17103D;
 }
 
-.genre .genreGrid .genreImage label {
+.genreImage label {
+  font-family: "Rubik", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,9 +418,6 @@ main {
           justify-content: center;
   width: 100%;
   height: 100%;
-  font-family: "Rubik", sans-serif;
-  font-size: 2rem;
-  text-transform: uppercase;
   color: #FFF;
   background-color: #423D5B;
   border: 2px solid transparent;
@@ -425,7 +426,7 @@ main {
   cursor: pointer;
 }
 
-.genre .genreGrid .genreImage label:hover {
+.genreImage label:hover {
   border: 2px solid #FFCA13;
 }
 
@@ -454,8 +455,8 @@ main {
   font-size: 1.4rem;
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 3px #17103D;
-          box-shadow: inset 0 0 3px #17103D;
+  -webkit-box-shadow: inset 0px 0px 3px #17103D;
+          box-shadow: inset 0px 0px 3px #17103D;
   padding: 5px 10px;
   margin-left: 1rem;
 }
@@ -485,9 +486,12 @@ main {
 
 .getMovies,
 .resetButton {
+  font-family: "Rubik", sans-serif;
+  font-weight: bolder;
   background-color: #FFCA13;
+  color: #17103D;
   border: none;
-  padding: 10px 50px;
+  padding: 12px 40px 10px;
   border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -504,78 +508,66 @@ main {
 
 .genreImage .svg {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 100%;
 }
 
 .genreImage .action {
   background-image: url(../image/action.svg);
-  background-position: center 50%;
   background-size: 50%;
 }
 
 .genreImage .animation {
   background-image: url(../image/animation.svg);
-  background-position: center 80%;
-  background-size: 38%;
+  background-size: 40%;
 }
 
 .genreImage .comedy {
   background-image: url(../image/comedy.svg);
-  background-position: center 85%;
-  background-size: 38%;
+  background-size: 40%;
 }
 
 .genreImage .drama {
   background-image: url(../image/drama.svg);
-  background-position: center 85%;
-  background-size: 50%;
+  background-size: 55%;
 }
 
 .genreImage .fantasy {
   background-image: url(../image/fantasy.svg);
-  background-position: center 85%;
-  background-size: 40%;
+  background-size: 45%;
 }
 
 .genreImage .horror {
   background-image: url(../image/horror.svg);
-  background-position: center 85%;
   background-size: 50%;
 }
 
 .genreImage .musical {
   background-image: url(../image/musical.svg);
-  background-position: center 85%;
-  background-size: 40%;
+  background-size: 45%;
 }
 
 .genreImage .romance {
   background-image: url(../image/romance.svg);
-  background-position: center;
-  background-size: 50%;
+  background-size: 60%;
 }
 
 .genreImage .sci-fi {
   background-image: url(../image/sci-fi.svg);
-  background-position: center 85%;
-  background-size: 38%;
+  background-size: 40%;
 }
 
 .genreImage .thriller {
   background-image: url(../image/thriller.svg);
-  background-position: center 85%;
-  background-size: 38%;
+  background-size: 40%;
 }
 
 .genreImage .war {
   background-image: url(../image/war.svg);
-  background-position: center 85%;
   background-size: 40%;
 }
 
 .genreImage .western {
   background-image: url(../image/western.svg);
-  background-position: center;
   background-size: 50%;
 }
 
@@ -639,7 +631,7 @@ main {
 }
 
 .flip-card-back .synopsis {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 2.2rem;
   text-align: center;
 }
@@ -669,6 +661,10 @@ footer p {
   color: white;
 }
 
+footer p span {
+  color: #FFCA13;
+}
+
 @media (max-width: 900px) {
   html {
     font-size: 58%;
@@ -680,7 +676,7 @@ footer p {
     padding-top: 50px;
   }
   header .instructions {
-    top: 100%;
+    top: 100px;
   }
   .wrapper {
     width: 90%;
@@ -708,6 +704,10 @@ footer p {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
     padding: 4% 14%;
+  }
+  .genre .genreGrid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .genre .genreImage .action {
     background-size: 40%;
@@ -745,25 +745,53 @@ footer p {
   .genre .genreImage .western {
     background-size: 40%;
   }
-  .genre .genreGrid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
   .getMovies {
     display: block;
     margin-bottom: 20px;
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   html {
     font-size: 50%;
   }
+  html h1 {
+    font-size: 7rem;
+  }
+  .movieForm {
+    padding-top: 10px;
+  }
+  .movieForm .yearInput {
+    font-size: 2.6rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .movieForm .yearInput input {
+    font-size: 1.8rem;
+    width: 150px;
+    height: 30px;
+  }
   .resultPageSection {
     padding: 8% 14% 4%;
+    margin-bottom: 100px;
   }
   .getMovies {
-    display: block;
+    width: 100%;
+  }
+  footer p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .getMovies {
+    font-size: 2.6rem;
+    width: 200px;
+    height: 55px;
+  }
+  .resetButton {
+    bottom: -40px;
   }
 }
 
@@ -771,8 +799,14 @@ footer p {
   html {
     font-size: 45%;
   }
+  html h1 {
+    font-size: 6rem;
+  }
   html .instructions {
-    top: 150px;
+    top: 80px;
     right: 10px;
+  }
+  html .resetButton {
+    bottom: -50px;
   }
 }

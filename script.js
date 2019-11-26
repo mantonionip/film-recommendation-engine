@@ -7,8 +7,6 @@ movieApp.genreID = [];
 
 movieApp.releaseYear = [];
 
-movieApp.voterAverage = [];
-
 // Make AJAX request with user inputted data
 movieApp.getInfo = function () {
     movieApp.yearOfMaking();
@@ -46,22 +44,22 @@ movieApp.getInfo = function () {
     })
 }
 
-// instructions alerts
+// Function to display the instruction alert
 movieApp.instructions = function () {
     $(".instructions").on("click", function () {
         swal(
             'Instructions',
-            'Pick a Year, select your favorite genre, and get the first 3 high rated films. Hover over the posters and read more info about the selected title!',
+            'Pick a Year, select your favorite genre, and get the first three high rated films. When you hover over the selected poster, it flips and you can get more info about your favorite film!',
         )
     })
 }
 
-// Function to select the year by the user
+// Function to select the year by the user 
 movieApp.yearOfMaking = function() {
     movieApp.releaseYear = $('#year').val();
 }
 
-// Function to select the genre by the user on-click event handler
+// Function to select the genre by the user
 movieApp.movieGenre = function() {
     movieApp.genreID = $("input[type=radio]:checked").val();
 }
@@ -74,11 +72,17 @@ movieApp.displaySearchPage = function () {
 // Function to reset the result page and back to main page
 movieApp.displayMovies = function () {
     $('.resetButton').on('click', function() {
+        // removes result page
         $('.resultPageSection').empty();
+        // displays main page
         $('.showBegins').show();
+        // resets year input
         $('#year').val('');
+        // resets genre boxes
         $("input[type=radio]").prop("checked", false);
+        // hides footer on the main page
         $('footer').empty();
+        // hides reset button on the main page
         $('.resetButton').css({
             "display": "none"
         });
@@ -103,9 +107,10 @@ movieApp.userSubmission = function() {
                 imageHeight: 300,
                 imageAlt: 'Joaquin Phoenix in Joker Smiling',
             })
+
         // If user forget to enter both year and select genre
         } else if ($('#year').val() === "" && 
-                    !$("input[type=radio]").is(':checked')) {
+                  !$("input[type=radio]").is(':checked')) {
             swal({
                 title: 'WARNING!',
                 text: 'Arrrrr! You Forgot to Pick  a Year and Select Genre',
@@ -114,6 +119,7 @@ movieApp.userSubmission = function() {
                 imageHeight: 200,
                 imageAlt: 'Jack Nicholson in Shining',
             })
+
         // If user enters a year before 1895 or after 2020    
         } else if ($('#year').val() > 2020 || $('#year').val() < 1895) {
             swal({
@@ -124,6 +130,7 @@ movieApp.userSubmission = function() {
                 imageHeight: 200,
                 imageAlt: 'Emma Thorman in Pulp Fiction lying on the bed smoking',
             })
+
         // If user enters the correct year and pick genre
         } else if ($('#year').val() !== "" &&
             $('#year').val() <= 2020 &&
@@ -134,6 +141,7 @@ movieApp.userSubmission = function() {
             movieApp.displayMovies();
             movieApp.showFooter();
 
+            // display reset button on the result page
             $('.resetButton').css({
                 "display": "block"
             });
@@ -142,11 +150,11 @@ movieApp.userSubmission = function() {
 }
 
 movieApp.showFooter = function() {
-    const displayFooter = `<div class="wrapper">
-            <p>Copyright &#169; 2019 Mehdi Pilehvarian and Wade Butler</p>
-            
-        </div>`
-
+    const displayFooter = 
+    `<div class="wrapper">
+        <p>Copyright &#169; 2019 <span>Mehdi Pilehvarian</span> and <span>Wade Butler</span></p>
+    </div>`
+    // appends footer tot the second page on a user click
     $('footer').append(displayFooter);
 }
 

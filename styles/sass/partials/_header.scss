@@ -6,35 +6,64 @@ header {
     height: 15vh;
 
     h1 {
-        padding: 2% 0 0 0;
-        font-size: 7rem;
+        font-size: 8rem;
         font-weight: bolder;
-
+        padding: 3% 0 0 0;
         animation: neon .08s ease-in-out infinite alternate;
     }
+}
 
-    .instructions {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        border: none;
-        background-color: transparent;
+.instructions {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
 
-        font-size: 1.5rem;
+    .fas {
+        font-size: 6rem;
+        color: $color-tertiary;
+        transition: all .5s;
 
-        .fas {
-            font-size: 6rem;
-            color: $color-tertiary;
-            transition: all .5s;
-
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.2);
-            }
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
         }
     }
 }
 
+// SweetAlert Messages Style
+.swal2-popup {
+    width: 450px;
+    height: 350px;
+    background: $color-tertiary;
+
+    .swal2-image {
+        width: 300px;
+        height: 200px;
+    }
+
+    .swal2-title {
+        color: $color-primary;
+    }
+
+    .swal2-content {
+        font-family: $font-secondary;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $color-primary;
+        padding: 0 20px;
+    }
+
+    .swal2-styled.swal2-confirm {
+        font-size: 1.5rem;
+        padding: 10px 30px 8px;
+        background-color: $color-primary;
+    }
+}
+
+// Neon Animation Keyframes
 @keyframes neon {
     from {
         text-shadow:
@@ -53,39 +82,5 @@ header {
         0 0 22px rgba(30,132,242,0.84),
         0 0 38px rgba(30,132,242,0.88),
         0 0 60px rgba(30,132,242,1);
-    }
-}
-
-.swal2-popup {
-    width: 450px;
-    height: 350px;
-    background: $color-tertiary;
-
-    .swal2-image {
-        width: 300px;
-        height: 200px;
-    }
-
-    .swal2-title {
-        // font-size: 4rem;
-
-        color: $color-primary;
-    }
-
-    .swal2-content {
-        font-family: $font-secondary;
-        font-size: 1.6rem;
-        line-height: 1.5;
-
-        color: $color-primary;
-
-        // margin: 1.5rem 0;
-        padding: 0 20px;
-    }
-
-    .swal2-styled.swal2-confirm {
-        font-size: 1.5rem;
-        padding: 10px 30px 8px;
-        background-color: $color-primary;
     }
 }

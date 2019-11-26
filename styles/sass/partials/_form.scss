@@ -17,39 +17,38 @@ main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 15px;
+    }
+}
 
-        .genreImage {
-            height: 120px;
-            
-            input:focus + label {
-                background-color: rgba(220, 20, 60, .4);
-            }
-            
-            input:checked + label {
-                background-color: $color-tertiary;
-                color: $color-primary;
-            }
-            
-            label {
-                display: flex;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                font-family: $font-secondary;
-                font-size: 2rem;
-                text-transform: uppercase;
+.genreImage {
+    height: 120px;
+    
+    input:focus + label {
+        background-color: rgba(220, 20, 60, .4);
+    }
+    
+    input:checked + label {
+        background-color: $color-tertiary;
+        color: $color-primary;
+    }
+    
+    label {
+        font-family: $font-secondary;
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: $color-light;
+        background-color: $color-secondary;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
 
-                color: $color-light;
-                background-color: $color-secondary;
-                border: 2px solid transparent;
-                border-radius: 5px;
-                padding: 10px;
-                cursor: pointer;
-
-                &:hover {
-                    border: 2px solid $color-tertiary;
-                }
-            }
+        &:hover {
+            border: 2px solid $color-tertiary;
         }
     }
 }
@@ -58,7 +57,6 @@ main {
     font-size: 2rem;
     margin: 2% 0;
     color: $color-light;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -71,10 +69,9 @@ main {
         height: 3rem;
         font-family: $font-secondary;
         font-size: 1.4rem;
-        
         border: none;
         border-radius: 5px;
-        box-shadow: inset 0 0 3px $color-primary;
+        box-shadow: inset 0px 0px 3px $color-primary;
         padding: 5px 10px;
         margin-left: 1rem;
     }
@@ -98,15 +95,17 @@ main {
     bottom: -100px;
     left: 50%;
     transform: translate(-50%);
-
     display: none;
 }
 
 .getMovies,
 .resetButton {
-    background-color: $color-tertiary; 
+    font-family: $font-secondary;
+    font-weight: bolder;
+    background-color: $color-tertiary;
+    color: $color-primary; 
     border: none;
-    padding: 10px 50px;
+    padding: 12px 40px 10px;
     border: 2px solid transparent;
     border-radius: 5px;
     cursor: pointer;
@@ -119,83 +118,72 @@ main {
     }
 }
 
-// Genre SVG Backgrounds Styles
+// Genre SVG Backgrounds Style starts
 .genreImage {
     .svg {
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center 100%;
     }
     
     .action {
         background-image: url(../image/action.svg);
-        background-position: center 50%;
         background-size: 50%;
     }
 
     .animation {
         background-image: url(../image/animation.svg);
-        background-position: center 80%;
-        background-size: 38%;
+        background-size: 40%;
 
     }
 
     .comedy {
         background-image: url(../image/comedy.svg);
-        background-position: center 85%;
-        background-size: 38%;
+        background-size: 40%;
     }
 
     .drama {
         background-image: url(../image/drama.svg);
-        background-position: center 85%;
-        background-size: 50%;
+        background-size: 55%;
     }
 
     .fantasy {
         background-image: url(../image/fantasy.svg);
-        background-position: center 85%;
-        background-size: 40%;
+        background-size: 45%;
     }
 
     .horror {
         background-image: url(../image/horror.svg);
-        background-position: center 85%;
         background-size: 50%;
     }
 
     .musical {
         background-image: url(../image/musical.svg);
-        background-position: center 85%;
-        background-size: 40%;
+        background-size: 45%;
     }
 
     .romance {
         background-image: url(../image/romance.svg);
-        background-position: center;
-        background-size: 50%;
+        background-size: 60%;
     }
 
     .sci-fi {
         background-image: url(../image/sci-fi.svg);
-        background-position: center 85%;
-        background-size: 38%;
+        background-size: 40%;
     }
 
     .thriller {
         background-image: url(../image/thriller.svg);
-        background-position: center 85%;
-        background-size: 38%;
+        background-size: 40%;
     }
 
     .war {
         background-image: url(../image/war.svg);
-        background-position: center 85%;
         background-size: 40%;
     }
 
     .western {
         background-image: url(../image/western.svg);
-        background-position: center;
         background-size: 50%;
     }
 }
+// Genre SVG Backgrounds Style ends

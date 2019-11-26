@@ -13,7 +13,7 @@
 
     header {
         .instructions {
-            top: 100%;
+            top: 100px;
         }
     }
 
@@ -52,6 +52,10 @@
     }
 
     .genre {
+
+        .genreGrid {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         .genreImage {
             .action {
@@ -102,11 +106,6 @@
             .western {
                 background-size: 40%;
             }
-}
-        
-        
-        .genreGrid {
-            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -116,20 +115,56 @@
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
     html {
         font-size: 50%;
 
-       
+        h1 {
+            font-size: 7rem;
+        }
+    }
+
+    .movieForm {
+        padding-top: 10px;
+
+        .yearInput {
+            font-size: 2.6rem;
+            justify-content: center;
+
+            input {
+                font-size: 1.8rem;
+                width: 150px;
+                height: 30px;
+            }
+        }
     }
 
     .resultPageSection {
         padding: 8% 14% 4%;
+        margin-bottom: 100px;
     }
 
     .getMovies {
-        display: block;
-        // margin-bottom: 20px;
+        width: 100%;
+    }
+
+    footer {
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .getMovies {
+        font-size: 2.6rem;
+        width: 200px;
+        height: 55px;
+    }
+    
+    .resetButton {
+        bottom: -40px;
     }
 }
 
@@ -137,9 +172,17 @@
     html {
         font-size: 45%;
 
+        h1 {
+            font-size: 6rem;
+        }
+
         .instructions {
-            top: 150px;
+            top: 80px;
             right: 10px;
+        }
+
+        .resetButton {
+            bottom: -50px;
         }
     }
 }

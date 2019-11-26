@@ -1,15 +1,8 @@
 footer {
-    // display: none;
     position: fixed;
     bottom: 0;
-    // display: none;
     width: 100%;
     background: $color-primary;
-    
-    // div {
-    //     display: flex;
-    //     justify-content: space-between;
-    // }
 
     p {
         font-family: $font-secondary;
@@ -17,5 +10,9 @@ footer {
         text-align: center;
         
         color: white;
+
+        span {
+            color: $color-tertiary;
+        }
     }
 }
