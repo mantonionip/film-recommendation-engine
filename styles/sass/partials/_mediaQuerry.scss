@@ -1,0 +1,145 @@
+@media (max-width: 900px) {
+    html {
+        font-size: 58%;
+
+        h1 {
+            margin: 10% 0;
+        }
+
+        form {
+            padding-top: 50px;
+        }
+    }
+
+    header {
+        .instructions {
+            top: 100%;
+        }
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .flip-card-back {
+
+        padding: 40px;
+
+        h2 {
+            font-size: 4rem;
+        }
+
+        .rating {
+            font-size: 3rem;
+        }
+
+        .synopsis {
+            font-size: 2rem;
+            line-height: 3rem;
+
+            .span {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .resultPageSection {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 4% 14%;
+    }
+
+    .genre {
+
+        .genreImage {
+            .action {
+                background-size: 40%;
+            }
+
+            .animation {
+                background-size: 28%;
+
+            }
+
+            .comedy {
+                background-size: 28%;
+            }
+
+            .drama {
+                background-size: 40%;
+            }
+
+            .fantasy {
+                background-size: 30%;
+            }
+
+            .horror {
+                background-size: 40%;
+            }
+
+            .musical {
+                background-size: 30%;
+            }
+
+            .romance {
+                background-size: 40%;
+            }
+
+            .sci-fi {
+                background-size: 28%;
+            }
+
+            .thriller {
+                background-size: 28%;
+            }
+
+            .war {
+                background-size: 30%;
+            }
+
+            .western {
+                background-size: 40%;
+            }
+}
+        
+        
+        .genreGrid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .getMovies {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        font-size: 50%;
+
+       
+    }
+
+    .resultPageSection {
+        padding: 8% 14% 4%;
+    }
+
+    .getMovies {
+        display: block;
+        // margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    html {
+        font-size: 45%;
+
+        .instructions {
+            top: 150px;
+            right: 10px;
+        }
+    }
+}
