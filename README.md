@@ -4,7 +4,7 @@
 
 [Live Demo](https://filmclub.netlify.com/)
 
-![](images/screenShot.png)
+![](image/screenShot.png)
 
 ## Description:
 A movie search app using the MovieDB API to pull the highest rated movies of a genre in a year of your choosing!
