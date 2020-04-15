@@ -19,5 +19,6 @@ A movie search app using the MovieDB API to pull the highest rated movies of a g
 * VSCode
 
 ## Code & Design by:
-:[Mehdi Pilehvarian](https://mehdipilehvarian.dev/)
-:[Wade Butler](https://wadebutler.ca/)
+[Mehdi Pilehvarian](https://mehdipilehvarian.dev/)
+
+[Wade Butler](https://wadebutler.ca/)
