@@ -12,7 +12,7 @@ A movie search app using the MovieDB API to pull the highest rated movies of a g
 ## Built with:
 
 * HTML5
-* CSS3
+* CSS3/ Sass
 * JavaScript
 * jQuery
 * RESTful APIs
